@@ -1,0 +1,134 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    font-size: 18px; /* Tăng kích thước font chung */
+}
+.cv-container {
+    display: flex;
+    justify-content: flex-start;
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* Thêm khung và đổ bóng cho các phần */
+.cv-section {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 10px;
+}
+
+.personal-info h1 {
+    font-size: 24px;
+    margin-top: 20px;
+    white-space: nowrap; /* Ngăn tiêu đề tên xuống dòng */
+}
+
+
+.cv-header {
+    width: 40%;
+    padding: 20px;
+    white-space: nowrap;
+}
+
+.cv-header img {
+    max-width: 100%;
+}
+
+.personal-info h2 {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.cv-main {
+    width: 60%;
+    padding: 20px;
+}
+
+.experience h2,
+.education h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.job,
+.school {
+    margin-bottom: 20px;
+}
+
+.job h3,
+.school h3 {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+p {
+    font-size: 16px;
+}
+/* ... (Các phần CSS khác) ... */
+
+/* Định dạng kỹ năng */
+.skills {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.skill-bar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.skill-name {
+    width: 100px; /* Chiều rộng của tên kỹ năng */
+    text-align: right;
+    padding-right: 10px;
+}
+
+.skill-bar-progress {
+    flex-grow: 1; /* Để thanh đổ đầy theo phần trăm */
+    background-color: #ccc;
+    height: 10px;
+    border-radius: 5px;
+    margin-left: 10px;
+    overflow: hidden;
+}
+
+.skill-bar-fill {
+    background-color: #007bff; /* Màu của thanh đổ đầy */
+    height: 100%;
+    width: 70%; /* Thay đổi phần trăm đổ đầy ở đây */
+}
+/* Điều chỉnh đáp ứng cho điện thoại di động */
+@media (max-width: 768px) {
+    .cv-container {
+        flex-direction: column; /* Chuyển thành kiểu dọc cho màn hình nhỏ hơn 768px */
+        align-items: center;
+    }
+
+    .cv-header, .cv-main {
+        width: 100%;
+    }
+
+    .personal-info h1 {
+        font-size: 20px; /* Giảm kích thước font cho tên trên điện thoại */
+    }
+
+    .skills .skill-name {
+        width: 100%; /* Độ rộng 100% cho tên kỹ năng */
+        text-align: left;
+        padding-right: 0;
+    }
+}
